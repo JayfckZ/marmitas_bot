@@ -5,7 +5,7 @@ from .config import Settings
 engine = create_engine(
     Settings.DATABASE_URL,
     connect_args=(
-        {"check_same_thread": False} if "sqlite" in settings.DATABASE_URL else {}
+        {"check_same_thread": False} if "sqlite" in Settings.DATABASE_URL else {}
     ),
 )
 

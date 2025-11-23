@@ -1,11 +1,11 @@
 from enum import unique
 
-from sqlalchemy import Colum, Integer, String
+from sqlalchemy import Column, Integer, String
 from app.db import Base
 
 
 class Customer(Base):
-    __tablename__ = "customer"
+    __tablename__ = "customers"
 
     id = Column(Integer, primary_key=True, index=True)
     whatsapp = Column(String, unique=True, index=True)
